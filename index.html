@@ -1,0 +1,68 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Agent Discovery Framework</title><style>
+:root { --paper: #F8F6F1;
+--surface: #FFFFFF;
+--ink: #17212B;
+--muted: #607080;
+--subtle: #87929D;
+--border: #D8DEE3;
+--accent: #247A82;
+--accent-soft: #E1F0EF;
+--accent-deep: #1A5961;
+--positive: #2E7D5B;
+--warning: #A96818;
+--negative: #A74646;
+--space-xs: 8px;
+--space-sm: 16px;
+--space-md: 24px;
+--space-lg: 36px;
+--space-xl: 52px;
+--type-sans: Inter, "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
+--type-title-px: 40px;
+--type-key-message-px: 19px;
+--type-section-px: 13px;
+--type-body-px: 18px;
+--type-label-px: 15px;
+--type-footnote-px: 12px;
+--safe-margin: 112px;
+--radius: 8px; }
+* { box-sizing: border-box; }
+body { margin: 0; background: #e7e8e6; color: var(--ink); font-family: var(--type-sans); }
+.deck { display: grid; gap: 28px; padding: 28px; justify-content: center; }
+.slide { position: relative; width: 1600px; height: 900px; overflow: hidden; background: var(--paper); padding: var(--safe-margin); display: flex; flex-direction: column; }
+.slide-header { max-width: 1280px; }
+.section-label, .eyebrow { color: var(--accent-deep); text-transform: uppercase; letter-spacing: .12em; font-size: var(--type-section-px); font-weight: 700; margin-bottom: var(--space-sm); }
+h1 { font-size: var(--type-title-px); line-height: 1.12; letter-spacing: -.028em; margin: 0; max-width: 1220px; font-weight: 750; }
+.key-message { color: var(--muted); font-size: var(--type-key-message-px); line-height: 1.42; margin: var(--space-sm) 0 0; max-width: 1160px; }
+.slide-content { flex: 1; min-height: 0; padding-top: var(--space-lg); display: flex; }
+p, li { font-size: var(--type-body-px); line-height: 1.46; }
+p { margin: 0 0 var(--space-sm); }
+ul, ol { margin: 0; padding-left: 1.3em; display: grid; gap: 12px; }
+li::marker { color: var(--accent); }
+h3 { font-size: 20px; line-height: 1.2; margin: 0 0 var(--space-sm); font-weight: 750; }
+footer { min-height: 24px; color: var(--subtle); display: flex; align-items: end; gap: 24px; font-size: var(--type-footnote-px); }
+footer > span { order: 2; margin-left: auto; color: var(--subtle); font-size: 12px; letter-spacing: .08em; }
+.footnotes { order: 1; max-width: 1180px; margin-right: auto; }.footnotes p, .footnotes li { font-size: var(--type-footnote-px); line-height: 1.3; margin: 0; }.footnotes ul,.footnotes ol { gap: 2px; }
+.cover { background: var(--ink); color: var(--paper); padding: 94px var(--safe-margin) var(--safe-margin); justify-content: space-between; }.cover-rule { width: 94px; height: 8px; background: var(--accent); }.cover h1 { font-size: 64px; max-width: 1120px; }.cover-body { margin-top: auto; margin-bottom: auto; }.cover .eyebrow { color: #a8d3d0; }.cover-subtitle { font-size: 27px; line-height: 1.35; max-width: 890px; color: #d9e0df; margin-top: var(--space-md); }.cover-context { font-size: 15px; color: #aeb8b8; }
+.divider { background: var(--accent-soft); flex-direction: row; align-items: stretch; gap: 72px; }.divider-number { font-size: 190px; line-height: .78; color: var(--accent); font-weight: 750; letter-spacing: -.08em; }.divider-body { align-self: center; max-width: 1040px; }.divider h1 { font-size: 54px; }.divider p { font-size: 23px; color: var(--muted); margin-top: var(--space-md); max-width: 900px; }
+.narrative { width: min(1050px, 100%); }.narrative ul { gap: 18px; }.narrative li { padding-left: 8px; }
+.group-grid { width: 100%; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-md); align-content: start; }.group-grid.count-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }.group-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px 28px; }.group-card h3 { color: var(--accent-deep); }.group-card ul { gap: 8px; }.group-card li { font-size: 16px; }
+.comparison-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: 100%; gap: 0; border-top: 3px solid var(--ink); }.comparison-column { padding: 26px 34px; border-bottom: 1px solid var(--border); }.comparison-column + .comparison-column { border-left: 1px solid var(--border); }.comparison-column h3 { color: var(--accent-deep); }.comparison-column li { font-size: 17px; }
+.sequence { width: 100%; display: grid; grid-template-columns: repeat(4, 1fr); align-items: start; gap: 0; margin-top: 35px; }.phase { position: relative; padding: 0 24px 0 0; min-height: 210px; border-top: 3px solid var(--accent); }.phase:not(:last-child)::after { content: ''; position: absolute; top: -2px; right: 0; width: 24px; border-top: 1px solid var(--accent); }.phase + .phase { padding-left: 24px; }.phase-number { display: grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--accent); color: white; font-size: 16px; font-weight: 750; margin-top: -21px; margin-bottom: 27px; }.phase p { font-size: 17px; }
+.layers { width: 100%; display: grid; gap: 10px; align-content: center; }.layer { border-left: 8px solid var(--accent); background: var(--surface); border-top: 1px solid var(--border); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 20px 28px; }.layer h3 { margin-bottom: 6px; }.layer p, .layer li { font-size: 16px; }.layer-2 { margin-left: 58px; border-left-color: var(--accent-deep); }.layer-3 { margin-left: 116px; border-left-color: var(--ink); }
+.table-wrap { width: 100%; overflow: hidden; border: 1px solid var(--border); border-radius: var(--radius); align-self: flex-start; }table { width: 100%; border-collapse: collapse; table-layout: fixed; }th { text-align: left; color: var(--paper); background: var(--ink); font-size: 15px; padding: 16px 18px; }td { font-size: 15px; line-height: 1.35; padding: 17px 18px; border-top: 1px solid var(--border); vertical-align: top; }tr:nth-child(even) td { background: #f0f1ef; }
+@media print { body { background: white; }.deck { gap: 0; padding: 0; }.slide { break-after: page; } }
+</style></head><body><div class="deck"><article class="slide cover"><div class="cover-rule"></div><div class="cover-body"><div class="eyebrow">External overview</div><h1>Agent Discovery Framework</h1><p class="cover-subtitle">从业务机会到受治理决策的框架</p></div><div class="cover-context">External overview · September 2026</div></article>
+<article class="slide content structure-sequence"><header class="slide-header"><div class="section-label">positioning</div><h1>Discovery 的作用：将业务机会转为受治理的投入判断</h1><p class="key-message">Discovery 在机会与解决方案方向之间发散、收敛，以权衡价值、可行性、风险、投入与时机；获 Go 的纲要切片进入 Inception，再通过切片与实现路径的探索收敛为可实施方案。</p></header><main class="slide-content"><div class="sequence"><section class="phase"><div class="phase-number">1</div><div><p><strong>Business Opportunity</strong>    多个业务问题、需求或机会进入探索；不同机会会因价值、条件与方案方向而形成不同优先级。</p></div></section><section class="phase"><div class="phase-number">2</div><div><p><strong>Discovery：探索与投入判断</strong>    比较多种解决方案方向，包括非 AI 路线、能力组合与 Agent 边界；形成 Solution Hypothesis、Solution Outline 与 Integrated Assessment。</p></div></section><section class="phase"><div class="phase-number">3</div><div><p><strong>Decision Gate</strong>    收敛为 <strong>Go（通过）/ Defer（暂缓）/ No-go（不推进）</strong>，明确投入方向、相对优先级、关键条件与时机。</p></div></section><section class="phase"><div class="phase-number">4</div><div><p><strong>Inception → Implementation → Operations</strong>    获 Go 的 Outline 切片进入 Inception；比较切片方式与实现路径，收敛为可实施方案，再进入建设、运行、衡量与学习。</p>
+<blockquote>当前 renderer 以顺序流程呈现；“探索—收敛—再探索—再收敛”的双菱形模板已记录为 Skill 反馈候选项，待受控语义与主题模板支持后替换。</blockquote></div></section></div></main><footer><span>02</span><div class="footnotes"><p>Source: Workflow/Discovery工作流.md, §1, §6.</p></div></footer></article>
+<article class="slide content structure-grouped-items"><header class="slide-header"><div class="section-label">framework</div><h1>Workflow、Operating Model 与 Reference 共同让 Discovery 可执行、可治理且判断一致</h1><p class="key-message">Workflow 定义决策如何形成，Operating Model 定义谁提供证据、谁作决定，Reference 提供可复用的判断参照。</p></header><main class="slide-content"><div class="group-grid count-3"><section class="group-card"><h3>Workflow</h3><ul><li>将业务机会逐步转为解决方案假设、纲要、综合评估与决策包。</li><li>明确 Discovery 的范围，以及与 Inception 的交接边界。</li></ul></section><section class="group-card"><h3>Operating Model</h3><ul><li>明确角色、责任、评估输入与决策关口的授权机制。</li><li>确保每项关键判断都有证据责任人，每个关口都有正式授权主体。</li></ul></section><section class="group-card"><h3>Reference</h3><ul><li>提供场景适配、能力边界与判断一致性的参照体系。</li><li>支持将业务问题、AI 能力组合与 Agent 边界联系起来。</li></ul></section></div></main><footer><span>03</span><div class="footnotes"><p>Source: Workflow/Discovery工作流.md; Operating Model/Discovery治理与责任模型.md; Reference/AI场景适配与能力边界.md.</p></div></footer></article>
+<article class="slide content structure-grouped-items"><header class="slide-header"><div class="section-label">workflow</div><h1>Discovery 通过“方向形成—纲要与评估—决策关口”将机会转为正式投入判断</h1><p class="key-message">解决方案纲要提出“建议做什么”，综合评估判断“凭什么值得、做得了、管得住、现在该做”；二者共同支撑 Go、Defer 或 No-go。</p></header><main class="slide-content"><div class="group-grid count-3"><section class="group-card"><h3>1. 方向形成</h3><p><strong>业务机会 → 解决方案假设（Solution Hypothesis）</strong></p>
+<ul><li>澄清目标对象、业务情境、价值承诺、初始范围与非目标。</li><li>将“想用 AI / Agent”转为可被证据支持或推翻的解决方案方向。</li></ul></section><section class="group-card"><h3>2. 纲要与评估</h3><p><strong>解决方案纲要（Solution Outline）</strong></p>
+<ul><li><strong>方案主张（Proposition）</strong>：目标场景、能力与交互方向、行动边界、所需信息与行动、假设与约束。</li></ul>
+<p><strong>综合评估（Integrated Assessment）</strong></p>
+<ul><li><strong>证据与判断（Evidence &amp; Judgement）</strong>：价值与战略、解决方案适配、准备状态、技术、风险与管控、投入与时机。</li></ul></section><section class="group-card"><h3>3. 决策关口</h3><p><strong>决策包（Decision Package） → Go / Defer / No-go</strong></p>
+<ul><li>汇集假设、纲要、评估、关键条件、风险与量级判断。</li><li><strong>Go（通过）</strong>进入 Inception；<strong>Defer（暂缓）</strong>记录重启条件、责任人和复审触发；<strong>No-go（不推进）</strong>记录理由与替代路线。</li></ul>
+<blockquote>这是逻辑顺序而非瀑布：评估可修正纲要和假设，也可直接支持 Defer 或 No-go。</blockquote></section></div></main><footer><span>04</span><div class="footnotes"><p>Source: Workflow/Discovery工作流.md, §2–§5.</p></div></footer></article>
+<article class="slide content structure-table"><header class="slide-header"><div class="section-label">operating model</div><h1>RACI 让角色、证据责任与 Decision Gate 的正式授权保持清晰</h1><p class="key-message">Solution Lead 整合从机会到决策包的工作；各角色对相应事实和证据负责；Decision Authority 在 Decision Gate 作出正式决定。</p></header><main class="slide-content"><div class="table-wrap"><table><thead><tr><th>关键活动</th><th>Business Owner</th><th>Solution Lead</th><th>Technology Lead</th><th>Key Stakeholders</th><th>Executive Sponsor</th><th>Decision Authority</th></tr></thead><tbody><tr><td>业务机会、业务结果与约束</td><td>A/R</td><td>R</td><td>C</td><td>C</td><td>C</td><td>I</td></tr><tr><td>解决方案假设</td><td>C</td><td>A/R</td><td>C</td><td>C</td><td>C</td><td>I</td></tr><tr><td>Solution Outline</td><td>C</td><td>A/R</td><td>R</td><td>C</td><td>I</td><td>I</td></tr><tr><td>Integrated Assessment</td><td>C</td><td>A/R（整合）</td><td>R（技术）</td><td>R（专业输入）</td><td>C</td><td>I</td></tr><tr><td>Decision Package 与 Gate 建议</td><td>C</td><td>A/R</td><td>R（技术输入）</td><td>C</td><td>C</td><td>I</td></tr><tr><td>Go / Defer / No-go</td><td>C</td><td>R（组织与说明）</td><td>C</td><td>C</td><td>C</td><td>A/R</td></tr></tbody></table>
+<blockquote><strong>RACI</strong>：R = 负责执行；A = 最终负责或授权；C = 被咨询；I = 被告知。</blockquote>
+<blockquote></blockquote>
+<blockquote><strong>Decision Gate</strong>：Go 明确下一阶段范围、交接责任人和残余风险；Defer 必须记录重启条件、责任人及复审日期或触发信号；No-go 记录拒绝理由、替代路线或可复用结论。</blockquote></div></main><footer><span>05</span><div class="footnotes"><p>Source: Operating Model/Discovery治理与责任模型.md, §2–§5.</p></div></footer></article></div></body></html>
