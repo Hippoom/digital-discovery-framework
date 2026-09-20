@@ -1,0 +1,3 @@
+# MkDocs and vendored search output are generated verbatim; whitespace is not a release-quality signal.
+*.html -whitespace
+*.js -whitespace

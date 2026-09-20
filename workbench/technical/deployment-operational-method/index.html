@@ -1,0 +1,1402 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Public Digital Discovery framework portal generated from canonical Markdown.">
+      
+      
+      
+        <link rel="canonical" href="https://hippoom.github.io/digital-discovery-framework/workbench/technical/deployment-operational-method/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Deployment 与 Operational 技术使能 - Digital Discovery Framework Portal</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/framework-portal.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#deployment-operational" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Digital Discovery Framework Portal" class="md-header__button md-logo" aria-label="Digital Discovery Framework Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Digital Discovery Framework Portal
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Deployment 与 Operational 技术使能
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+  <div class="portal-local-banner">Local preview — generated from canonical Markdown; not published.</div>
+  
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  首页
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../start-here/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  从这里开始
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../run-discovery/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  开展 Discovery
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../deep-workbench/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  深入工作台
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Digital Discovery Framework Portal" class="md-nav__button md-logo" aria-label="Digital Discovery Framework Portal" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Digital Discovery Framework Portal
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    首页
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../start-here/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    从这里开始
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_2" id="__nav_2_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    从这里开始
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start-here/business/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Business Stakeholders
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start-here/architecture-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Solution Architect
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../start-here/technology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Lead
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../run-discovery/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开展 Discovery
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    开展 Discovery
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workflow/digital-discovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    End-to-end Discovery workflow
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workflow/frame-business-opportunity/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Frame the Business Opportunity
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workflow/form-solution-hypothesis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 1 — Form Solution Hypotheses
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workflow/form-solution-outline/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Stage 2 — Form the Solution Outline
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../workflow/technical-viability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Technical Viability contribution
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../governance/operating-model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Governance and Gate authority
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../../deep-workbench/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    深入工作台
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    深入工作台
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deep-workbench/conduct/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    开展工作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deep-workbench/record/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    记录工作
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../deep-workbench/technical-viability/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    检验 Technical Viability
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 评估对象与边界
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 评估域的开发方法与原则
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. 评估域的开发方法与原则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        开发节奏
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        通用纪律
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-solution-outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Solution Outline 输入
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 结构化评价
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. 结构化评价">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        判断状态
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        专项结论规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 证据、条件与交接
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. 证据、条件与交接">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        最小证据方向
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        主归属
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一句话
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+  
+    <div class="portal-metadata" role="note">
+      <span class="portal-badge portal-badge--reference-method">Authority: Reference Method</span>
+      <span class="portal-badge portal-badge--status">Status: draft</span>
+      <span class="portal-source">Source: Reference/technology-assessment/deployment-and-operational/deployment-and-operational.md</span>
+    </div>
+  
+  
+                  
+
+
+
+<h1 id="deployment-operational">Deployment 与 Operational 技术使能<a class="headerlink" href="#deployment-operational" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>用途：作为 <a href="../technology-assessment/">Technology Assessment</a> 下的早期可复用 Assessment Domain，判断 Solution Outline 是否存在可信的 hosting / deployment、runtime / dependency 以及最低 <strong>IT Operations</strong> 承载、支持与管理路径。</p>
+<p>DFX 对齐：<strong>Deployment Viewpoint</strong> + <strong>Operational Viewpoint</strong>。本专项 <strong>not a new DFX Viewpoint or Perspective</strong>；任何 Availability &amp; Resilience、Evolution、Security 或 Regulatory Perspective 仅在具体 Concern 需要时采用。</p>
+</blockquote>
+<hr />
+<h2 id="1">1. 评估对象与边界<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code>Solution Outline claim
+  → Hosting / Deployment Path
+  → Runtime / Dependency Path
+  → IT Operations Support &amp; Management Path
+  → Deployment &amp; Operational Enablement
+</code></pre></div>
+<blockquote>
+<p><strong>Operational 在本专项中明确指 IT Operations。</strong>它不指业务运营、服务运营、客户支持流程、知识 Owner 流程、业务升级或 Operating Model。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>概念</th>
+<th>在本专项中的作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hosting / Deployment Assumption</strong></td>
+<td>方案需要何类候选承载、部署或交付路径；不等于最终云、本地、SaaS 或边缘选型。</td>
+</tr>
+<tr>
+<td><strong>Runtime / Dependency Assumption</strong></td>
+<td>核心能力需要何类运行时、服务、版本、依赖、集成和资源条件。</td>
+</tr>
+<tr>
+<td><strong>IT Operations Assumption</strong></td>
+<td>方案需要哪些最低 IT Operations 技术能力，才能被配置、变更、发现问题、支持、人工介入、停用/回退或方向性管理。</td>
+</tr>
+</tbody>
+</table>
+<p>本专项不选择最终 hosting 模型、云/私有环境/SaaS、本地或边缘方案；不设计拓扑、网络、规格、CI/CD、完整监控告警、SLO/SLA、Runbook、灾备或完整 IT Operations 模型。</p>
+<blockquote>
+<p>下列情况都<strong>不自动证明</strong>本专项成立：既有应用、历史生产使用、带重试的管线、业务升级路径、存在业务/产品/数据 Owner，或“cloud-based / enterprise-grade / managed”等泛称。</p>
+</blockquote>
+<hr />
+<h2 id="2">2. 评估域的开发方法与原则<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>本专项是一个可复用的 <strong>Technology Assessment Domain</strong>，不是新的核心对象、生命周期阶段或 Assessment 线。</p>
+<table>
+<thead>
+<tr>
+<th>完成条件</th>
+<th>在本专项中的落实</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>明确评估对象</strong></td>
+<td>特定 Outline claim 的 hosting/deployment、runtime/dependency 与 IT Operations 技术使能路径。</td>
+</tr>
+<tr>
+<td><strong>可控评估深度</strong></td>
+<td>只判断可信路径、关键限制与最小验证；不进入最终选型、详细部署或完整 IT Operations 设计。</td>
+</tr>
+<tr>
+<td><strong>可解释的判断逻辑与结果</strong></td>
+<td>以三个判断面和 Supported / Conditional / Unproven / Blocked 表达，不使用平均分。</td>
+</tr>
+<tr>
+<td><strong>明确证据与追溯方式</strong></td>
+<td>每项判断关联 Outline claim、Stakeholder、Concern、Deployment / Operational 最小 View、E0–E4 证据、限制与最小验证。</td>
+</tr>
+<tr>
+<td><strong>明确决策接口与主归属</strong></td>
+<td>Technical Viability 判断技术路径；本专项识别条件并通过 Under What Conditions 路由；Readiness to Proceed 判断平台/支持前提；Risk &amp; Control 判断控制与风险接受；Inception 深化实现。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_1">开发节奏<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>1. 从 Solution Outline 提取 hosting、runtime、dependency 或 IT Operations 主张
+2. 明确 Stakeholder Concern、系统边界和业务后果
+3. 定义最少且相互不重叠的判断面
+4. 为每个判断面定义调查问题、事实类型与最小证据
+5. 定义 Supported / Conditional / Unproven / Blocked 的判定逻辑
+6. 识别条件并通过 Under What Conditions 路由至 Readiness to Proceed、Risk &amp; Control、Investment &amp; Timing 或 Inception
+7. 使用真实或历史场景回填；发现表达缺口时再修订本专项
+</code></pre></div>
+<h3 id="_2">通用纪律<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>证据先于结论：</strong>事实、假设、推断、条件与结论分开记录；E0–E4 表示证据强度，不替代判断状态。</li>
+<li><strong>不从平台/部署标签倒推问题：</strong>先有 Outline claim 与 Concern，再选择 Deployment / Operational Viewpoint 与必要 Perspective。</li>
+<li><strong>不以 IT Operations 代替业务运营：</strong>业务 Owner、人工升级或客户支持流程不构成 IT Operations 使能证据。</li>
+<li><strong>不把跨线事项留在技术结论中：</strong>每个判断面可以识别条件与技术证据；其 materiality 由 Under What Conditions 筛选，前提可得性、控制充分性、风险接受与投入时机由相应 IA 维度形成结论。</li>
+<li><strong>以最小充分深度止步：</strong>只取足以支持 Go / Defer / No-go 或 Inception 交接的证据。</li>
+</ul>
+<hr />
+<h2 id="3-solution-outline">3. Solution Outline 输入<a class="headerlink" href="#3-solution-outline" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>输入</th>
+<th>要求</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hosting / Deployment Assumption</strong></td>
+<td>方案需要何类承载、部署、交付、隔离、区域或环境条件；可包含可接受的替代路径。</td>
+</tr>
+<tr>
+<td><strong>Runtime / Dependency Assumption</strong></td>
+<td>核心能力需要的服务、运行时、版本、依赖、集成边界、资源或受支持平台条件。</td>
+</tr>
+<tr>
+<td><strong>IT Operations Assumption</strong></td>
+<td>对配置、变更、最小问题发现/诊断、支持、人工介入、停用/回退、方向性恢复或退役的最低要求。</td>
+</tr>
+<tr>
+<td><strong>Known Technical Constraints</strong></td>
+<td>已知的环境、平台、依赖、生命周期、变更、支持或非协商技术限制。</td>
+</tr>
+</tbody>
+</table>
+<p>Outline 只写“需要 / 应具备 / 必须遵守”的主张，不写“环境已准备”“平台可用”“运维已覆盖”或“控制已获批准”等 Assessment 结论。</p>
+<hr />
+<h2 id="4">4. 结构化评价<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<p>不使用打分或平均分。每个判断面分别记录技术状态、证据、已识别条件与 Inception 交接；条件的 materiality 由 Under What Conditions 筛选，再按关键路径形成专项结论。</p>
+<table>
+<thead>
+<tr>
+<th>判断面</th>
+<th>要评价什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hosting &amp; Deployment Path Enablement</strong></td>
+<td>是否存在可承载 Outline 核心能力与关键依赖的可信候选 hosting/deployment path，并能满足已知地点、环境、网络、隔离、集成或交付方向约束；不选择最终方案。</td>
+</tr>
+<tr>
+<td><strong>Runtime Platform &amp; Dependency Enablement</strong></td>
+<td>候选运行环境是否可能运行核心能力并接入必要依赖，涵盖运行兼容性、依赖可达性、版本/生命周期方向性约束和必要的失败/降级限制；不设计详细运行时架构。</td>
+</tr>
+<tr>
+<td><strong>IT Operations Support &amp; Management Enablement</strong></td>
+<td>是否存在最低 IT Operations 技术路径，使服务/依赖可被配置、变更、最小发现和诊断、支持、人工介入、停用/回退、方向性恢复或退役；不设计完整监控、告警、SLO、Runbook 或恢复机制。</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_3">判断状态<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>状态</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Supported</strong></td>
+<td>已有证据支持该技术主张。</td>
+</tr>
+<tr>
+<td><strong>Conditional</strong></td>
+<td>技术路径存在，但依赖明确外部条件或仍需补充有限证据。</td>
+</tr>
+<tr>
+<td><strong>Unproven</strong></td>
+<td>尚无足够证据，不能据此形成可行性结论。</td>
+</tr>
+<tr>
+<td><strong>Blocked</strong></td>
+<td>已知约束否定该主张，或必须修改 Outline / 采用替代路径。</td>
+</tr>
+<tr>
+<td><strong>Not asserted / Not assessed</strong></td>
+<td>Outline 未提出相关 hosting、runtime 或 IT Operations 主张；本次不评估，不代表技术已支持。</td>
+</tr>
+</tbody>
+</table>
+<p>E0–E4 记录“凭什么知道”，不等同于上述判断状态。</p>
+<h3 id="_4">专项结论规则<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>任一关键判断面 = Blocked
+→ 专项通常为 Blocked；除非修改 Outline 主张或采用替代路径。
+
+无 Blocked，但存在关键 Unproven
+→ 专项为 Unproven；应优先补证据。
+
+关键路径均已验证，但存在平台、支持、控制或其他外部条件
+→ 专项为 Conditional；识别条件并通过 Under What Conditions 路由至 Readiness to Proceed / Risk &amp; Control / Investment &amp; Timing / Inception。
+
+全部关键判断面均为 Supported
+→ 专项为 Supported。
+</code></pre></div>
+<blockquote>
+<p>专项结论只表达技术路径判断，不是 Readiness to Proceed 或 Risk &amp; Control 的跨域汇总结论。</p>
+</blockquote>
+<hr />
+<h2 id="5">5. 证据、条件与交接<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<h3 id="_5">最小证据方向<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>| 判断面 | 最小技术证据示例 | 已识别条件及其 IA 路由 | Inception 交接 |
+|---|---|---|---|---|
+| Hosting &amp; Deployment Path | E1：受支持平台/服务资料、环境/交付约束；E2：代表性环境或发布证据；E3：高风险路径 Spike。 | 平台/环境、账号、许可、供应商、Owner、发布与资源能力 → Readiness to Proceed；云/SaaS、数据地点、安全/监管控制 → Risk &amp; Control；资源/许可/窗口影响当前承诺 → Investment &amp; Timing。 | 最终 Hosting 选择、拓扑、网络、规格、交付/发布设计。 |
+| Runtime Platform &amp; Dependency | E1：运行时/依赖约束资料；E2：版本/依赖、接口、作业或配置样本；E3：高风险运行或依赖 Spike。 | Runtime/平台供给、组件 Owner、许可、支持服务和接入协作 → Readiness to Proceed；脆弱/弃用依赖、供应链、数据与安全控制 → Risk &amp; Control；容量/资源包络影响当前承诺 → Investment &amp; Timing。 | 运行时架构、版本/包管理、依赖治理、容量/性能工程。 |
+| IT Operations Support &amp; Management | E1：支持/管理机制、技术限制、变更或失败处理资料；E2：配置、审计、重试、质量门禁、失败/停用样本；E3：高风险管理/故障路径 Spike。 | IT Operations Owner、支持覆盖、工具权限、变更/事件协作、平台操作能力 → Readiness to Proceed；特权操作、审计、保留、应急控制、事件风险接受 → Risk &amp; Control；支持/资源/窗口影响当前承诺 → Investment &amp; Timing。 | 监控/告警、SLO、Runbook、DR、详细 incident/recovery 和 IT Operations 设计。 |</p>
+<h3 id="_6">主归属<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>内容</th>
+<th>主归属</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>所需 hosting、runtime、dependency 与 IT Operations 特征</td>
+<td>Solution Outline</td>
+</tr>
+<tr>
+<td>承载、运行、依赖、IT Operations 技术路径、限制与最小验证</td>
+<td>Technical Viability</td>
+</tr>
+<tr>
+<td>平台/环境/账号/许可/资源、IT Operations Owner 和支持能力是否可获得或补齐</td>
+<td>Readiness to Proceed</td>
+</tr>
+<tr>
+<td>云/SaaS、数据地点、安全、特权、审计、供应链、控制充分性与风险接受</td>
+<td>Risk &amp; Control</td>
+</tr>
+<tr>
+<td>Hosting 选择、拓扑、运行时规格、CI/CD、监控/告警、SLO、Runbook、DR 和详细 IT Operations 设计</td>
+<td>Inception / Implementation</td>
+</tr>
+</tbody>
+</table>
+<p>使用 <a href="../../records/integrated-assessment/#41-functional-technical-feasibility-integration">综合评估记录卡</a> 记录每项判断面与专项结论，并关联 Outline claim、Stakeholder、Concern、Deployment / Operational 最小 View、E0–E4 证据、条件和交接。</p>
+<hr />
+<h2 id="_7">一句话<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Deployment &amp; Operational Enablement 评估方案是否存在可信的承载、运行、依赖与最低 IT Operations 技术路径；它嵌入平台、支持与风险条件，但不选择最终部署方案，也不设计完整 IT Operations。</strong></p>
+</blockquote>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.indexes", "navigation.top", "content.code.copy", "content.tooltips", "search.suggest", "search.highlight"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
