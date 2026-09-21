@@ -508,6 +508,8 @@
       
         
       
+        
+      
     
     
     
@@ -563,6 +565,34 @@
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../run-discovery/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Run a Discovery overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
               
             
               
@@ -821,6 +851,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#44-solution-outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 判断是否进入 Solution Outline
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -850,10 +891,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#solution-outline" class="md-nav__link">
+  <a href="#enter-so-solution-outline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        可进入 Solution Outline
+        Enter SO：可进入 Solution Outline
       
     </span>
   </a>
@@ -977,7 +1018,7 @@
   <span class="md-ellipsis">
     
   
-    Governance and Gate authority
+    Operating Model
   
 
     
@@ -1322,6 +1363,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#44-solution-outline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 判断是否进入 Solution Outline
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1351,10 +1403,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#solution-outline" class="md-nav__link">
+  <a href="#enter-so-solution-outline" class="md-nav__link">
     <span class="md-ellipsis">
       
-        可进入 Solution Outline
+        Enter SO：可进入 Solution Outline
       
     </span>
   </a>
@@ -1487,6 +1539,70 @@ Business Opportunity
 <p>一个 Business Opportunity 可形成 <code>0..n</code> 个 Solution Hypotheses。仅当候选方向在服务方式、价值机制或与当前做法的差异上真正不同，才分别记录并比较；每条 Hypothesis 使用一张 <a href="../../workbench/records/solution-hypothesis/">解决方案假设卡片</a>，不在单张 Card 中混写多个候选方向。</p>
 <h3 id="43">4.3 设置当前边界与待验证判断<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
 <p>为每条 Hypothesis 说明初始范围、非目标、成功假设、已知约束和待解问题。此处的成功假设用于说明什么信号会支持或削弱该方向；不要求完成完整 ROI、可行性或风险评估。</p>
+<h3 id="44-solution-outline">4.4 判断是否进入 Solution Outline<a class="headerlink" href="#44-solution-outline" title="Permanent link">&para;</a></h3>
+<p>进入 Solution Outline 不表示 Hypothesis 已被证明正确、技术已可行或已经可以实施。它只表示：这条方向已足以投入后续方案塑形工作，形成一个可评估的 Solution Outline proposition。</p>
+<p>判断时使用以下四个面：</p>
+<table>
+<thead>
+<tr>
+<th>判断面</th>
+<th>Hypothesis 至少需要明确什么</th>
+<th>不要求已经明确什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>方向可复述</strong></td>
+<td>能用业务或服务语言说明可能如何回应机会，而不是仅以 App、AI、Agent、RAG 或平台标签命名。</td>
+<td>L1 Solution Archetype、能力组合、触点或实现。</td>
+</tr>
+<tr>
+<td><strong>初始边界足够</strong></td>
+<td>有首个关注范围、非目标和已知红线，足以避免 Solution Outline 无边界展开。</td>
+<td>完整需求、详细流程、详细技术范围。</td>
+</tr>
+<tr>
+<td><strong>优先设计对象</strong></td>
+<td>能指出本轮应进一步探索的优先场景、目标动作或主要服务结果。</td>
+<td>完整 As-is / To-be Scenario Blueprint。</td>
+</tr>
+<tr>
+<td><strong>没有明确反证</strong></td>
+<td>没有已知事实足以否定该方向，或显示存在明显更优且已可说明的替代方向。</td>
+<td>价值、技术、风险或投入时机的正式结论。</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Worth shaping：</strong>当前没有明确反证，且团队能够说明为什么值得通过一个优先场景、目标动作或主要服务结果继续塑形。它不是“感觉值得做”，也不是价值、可行性或风险已经获得证明。</p>
+</blockquote>
+<p>判断结果只能是以下三类，不新增 Hypothesis 状态机：</p>
+<table>
+<thead>
+<tr>
+<th>结果</th>
+<th>含义</th>
+<th>后续动作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enter SO</strong></td>
+<td>方向、初始边界和优先设计对象已足以形成可评估方案主张。</td>
+<td>交接至 <a href="../form-solution-outline/">解决方案纲要 — 形成</a>。</td>
+</tr>
+<tr>
+<td><strong>Refine SH</strong></td>
+<td>方向、边界或优先设计对象仍不清楚，但值得继续澄清。</td>
+<td>留在本活动，补足或修正 Hypothesis。</td>
+</tr>
+<tr>
+<td><strong>Retain / Stop / Compare</strong></td>
+<td>当前不值得继续塑形，或应先比较其他方向；尚未形成任何可推进 Hypothesis 时，Opportunity 为 On Hold。</td>
+<td>记录理由、待补事实或恢复探索信号；不把它写成 Gate Defer。</td>
+</tr>
+</tbody>
+</table>
 <hr />
 <h2 id="5">5. 最小输出与记录<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>本活动的最小输出是针对一个 Business Opportunity 的一条或多条 Solution Hypotheses。每条 Hypothesis 由一张 <a href="../../workbench/records/solution-hypothesis/">解决方案假设卡片</a> 记录，至少包括：</p>
@@ -1502,16 +1618,19 @@ Business Opportunity
 </blockquote>
 <hr />
 <h2 id="6">6. 退出与后续交接<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<h3 id="solution-outline">可进入 Solution Outline<a class="headerlink" href="#solution-outline" title="Permanent link">&para;</a></h3>
-<p>当至少一条 Hypothesis 能清楚说明以下内容时，可进入后续 Solution Outline：</p>
+<h3 id="enter-so-solution-outline">Enter SO：可进入 Solution Outline<a class="headerlink" href="#enter-so-solution-outline" title="Permanent link">&para;</a></h3>
+<p>当至少一条 Hypothesis 已通过 4.4 的方向可复述、初始边界足够、优先设计对象和没有明确反证四个判断面时，可进入后续 Solution Outline。交接时至少保留：</p>
 <ul>
 <li>它回应哪个 Business Opportunity，以及为谁、在何种情境中回应；</li>
 <li>它提出的业务或服务方向、预期价值和关键差异；</li>
-<li>当前不承担什么、首个关注范围是什么；</li>
+<li>当前不承担什么、首个关注范围和优先设计对象是什么；</li>
 <li>什么业务结果或观察信号会支持或削弱该方向；</li>
 <li>已知约束与关键未知项。</li>
 </ul>
 <p>后续 Solution Outline 才将该方向正式展开为 L1 Solution Archetype、能力、服务触点、行动边界、信息需求与约束；Integrated Assessment 再判断这些主张是否具备证据、条件和可接受性。</p>
+<blockquote>
+<p><code>Enter SO</code> 不是新的 Gate 或 Hypothesis 状态；它只是本活动与 Solution Outline 形成之间的工作接口。</p>
+</blockquote>
 <h3 id="on-hold">On Hold<a class="headerlink" href="#on-hold" title="Permanent link">&para;</a></h3>
 <p>若 Opportunity 已被澄清，但当前没有任何方向能够以足够清楚的价值、边界和验证信号推进，Opportunity 保持 <strong>On Hold</strong>：</p>
 <ul>
@@ -1530,11 +1649,11 @@ Business Opportunity
 </thead>
 <tbody>
 <tr>
-<td>一条可追溯的 Solution Hypothesis</td>
+<td>已满足 Enter SO 判断面的 Solution Hypothesis</td>
 <td>作为 Solution Outline 的方向输入，而非详细设计输入</td>
 </tr>
 <tr>
-<td>初始范围与非目标</td>
+<td>初始范围、非目标与优先设计对象</td>
 <td>在 Outline 中展开为优先场景、服务边界与行动边界</td>
 </tr>
 <tr>
